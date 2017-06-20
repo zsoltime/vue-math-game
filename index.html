@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vue.js Math Game</title>
+  <meta name="description" content="Simple math game using Vue.js">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page" id="app">
+    <timer :seconds="time"></timer>
+    <div :class="{ game: true, 'game--active': !showModal }" v-cloak>
+      <h3 class="game__question">
+        {{question}} = <span class="blinking">?</span>
+      </h3>
+      <ul class="game__answers">
+        <li class="game__answer" v-for="answer in answers">
+          <button
+            class="game__btn"
+            @click="checkAnswer(answer)"
+          >{{answer}}</button>
+        </li>
+      </ul>
+      <p class="small-text-shadow">
+        Score: {{points}}
+      </p>
+    </div>
+    <modal v-if="showModal" @close="startGame" v-cloak>
+      <h2 class="modal__title">Mira&rsquo;s Math Games</h1>
+      <div>Score: {{points}}</div>
+      <button class="btn btn--start" @click="startGame">Start New Game</button>
+    </modal>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -4,11 +4,11 @@ This is the second day of my [Vue.js challenge](https://github.com/zsoltime/vue-
 
 ## User Stories
 
-- [ ] I can see a splash screen on page load
-- [ ] I can start the game by clicking on a button
-- [ ] I get a question and four answers, only one of them is correct
-- [ ] I can see a timer, which counts down, and my score
-- [ ] If I click on a correct answer, the remaining time increases and I receive points
-- [ ] If I click on a wrong answer, I don't receive any points and the remaining time decreases
-- [ ] The game ends when I've got no more time left
-- [ ] When the game ends, I can see the splash screen with my score and the option to restart the game
+- [x] I can see a splash screen on page load
+- [x] I can start the game by clicking on a button
+- [x] I get a question and four answers, only one of them is correct
+- [x] I can see a timer, which counts down, and I can see my score
+- [x] If I click on a correct answer, the remaining time increases and I receive points
+- [x] If I click on a wrong answer, I don't receive any points and the remaining time decreases
+- [x] The game ends when I've got no more time left or I had three wrong answers
+- [x] When the game ends, I can see the splash screen with my score and the option to restart the game
